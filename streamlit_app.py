@@ -1,17 +1,21 @@
 import streamlit as st
 
 def main():
+	# Add the disclaimer at the top with custom styling
+    st.markdown("""
+    <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; border: 1px solid #ddd; margin-bottom: 20px;">
+        <p style="font-family: 'Courier New', monospace; font-size: 14px; color: #d9534f; text-align: center;">
+            <strong>Disclaimer:</strong><br>
+            We are not responsible for any liability arising due to any error, omission, or representation on any of our pages or on any links on any of our pages.<br>
+            Please verify the law prescribed by the Government before relying on any information/outcome content on this link.<br>
+            - Deepak Kalani
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
     st.title("GST Liability on renting of Immovable Properties")
     st.write("Welcome to the GST Liability Assistant!")
     ask_type_of_property()
-	# Add the disclaimer as a footer
-    st.markdown("---")
-    st.write("""
-    **Disclaimer:**  
-    We are not responsible for any liability arising due to any error, omission, or representation on any of our pages or on any links on any of our pages.  
-    Please verify the law prescribed by the Government before relying on any information/outcome content on this link.  
-    - Deepak Kalani
-    """)
 
 def ask_type_of_property():
     st.subheader("Type of Property:")
