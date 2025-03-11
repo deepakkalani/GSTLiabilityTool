@@ -3,15 +3,15 @@ import streamlit as st
 def main():
     st.title("GST Liability on renting of Immovable Properties")
     st.write("Welcome to the GST Liability Assistant!")
-	# Add the disclaimer as a collapsible section
-    with st.expander("Disclaimer"):
-        st.write("""
-        **Disclaimer:**  
-        We are not responsible for any liability arising due to any error, omission, or representation on any of our pages or on any links on any of our pages.  
-        Please verify the law prescribed by the Government before relying on any information/outcome content on this link.  
-        - Deepak Kalani
-        """)
     ask_type_of_property()
+	# Add the disclaimer as a footer
+    st.markdown("---")
+    st.write("""
+    **Disclaimer:**  
+    We are not responsible for any liability arising due to any error, omission, or representation on any of our pages or on any links on any of our pages.  
+    Please verify the law prescribed by the Government before relying on any information/outcome content on this link.  
+    - Deepak Kalani
+    """)
 
 def ask_type_of_property():
     st.subheader("Type of Property:")
